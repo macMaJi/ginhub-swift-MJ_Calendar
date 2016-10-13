@@ -16,7 +16,7 @@ class MJ_CalendarView: UICollectionView ,UICollectionViewDelegate ,UICollectionV
     var searchDay: Int = 0
     
     
-    var currentDateStr: String?   //当前时间的字符串"20161012"
+    var currentDateStr: String?   //当前时间的字符串 格式--"20161012"
     
     var nextButton: UIButton?     //记录当前的下一个按钮
     
@@ -76,9 +76,11 @@ class MJ_CalendarView: UICollectionView ,UICollectionViewDelegate ,UICollectionV
         day = MJ_Calendar.getDay()
         searchDay = day
         //添加哪天签到啦
-        registerArr = ["20160909","20161018","20160908"]
+//        registerArr = ["20160909","20161018","20160908"]
         //可以发送网络请求,也可以存到本地去取
         
+        
+        currentDateStr = String(format: "%.4d%.2d%.2d", year , month ,day)
         //返回一个月有多少天
         daysOfMonth = MJ_Calendar.getDaysOfMonth(year, month: month)
         searchDaysOfMonth = daysOfMonth
