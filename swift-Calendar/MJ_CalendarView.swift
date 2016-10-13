@@ -5,9 +5,8 @@
 //  Created by mac on 16/10/12.
 //  Copyright © 2016年 mac. All rights reserved.
 //
-//发打发打发打发打发打发
+
 import UIKit
-//我就是测试一下改了没有------------------------
 class MJ_CalendarView: UICollectionView ,UICollectionViewDelegate ,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
     var year:Int = 0              //当前的时间
     var searchYear:Int = 0        //记录用户选择的时间
